@@ -13,10 +13,17 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: 50.0,
-                backgroundImage: AssetImage('assets/images/pial.jpg'),
+              Card(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                child: CircleAvatar(
+                  radius: 50.0,
+                  backgroundImage: AssetImage('assets/images/pial.jpg'),
+                ),
               ),
               Text(
                 'Hamidur Rahaman Pial',
@@ -35,7 +42,57 @@ class MyApp extends StatelessWidget {
                   color: Colors.teal.shade100,
                   letterSpacing: 2.5,
                 ),
-              )
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                //shape: CircleBorder(),
+                elevation: 5,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal.shade100,
+                  ),
+                  title: Text(
+                    '+61 047 8089 123',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.teal.shade900,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                elevation: 5,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal.shade100,
+                  ),
+                  title: Text(
+                    'pial988p@gmail.com',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.teal.shade900,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

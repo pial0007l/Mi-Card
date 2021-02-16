@@ -12,7 +12,32 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Column(),
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('assets/images/pial.jpg'),
+              ),
+              Text(
+                'Hamidur Rahaman Pial',
+                style: TextStyle(
+                  fontSize: 38.0,
+                  fontFamily: 'Pacifico',
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.teal.shade100,
+                  letterSpacing: 2.5,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
